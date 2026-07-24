@@ -1,26 +1,28 @@
-# Project Guide
+Cinematic Farewell Letter
 
-## Architecture
+A quiet, responsive farewell website designed as one continuous editorial reading experience. The original letter remains intact and the supplied photo mosaic stays in its intended position within the story.
 
-This is a dependency-free static Netlify site. The experience is intentionally implemented with plain HTML, CSS, and JavaScript so it can deploy without a compilation step.
+## Technologies
 
-## Key Files
+- HTML5 for the semantic letter structure
+- CSS3 for the dark editorial design, responsive layout, and transitions
+- Vanilla JavaScript for scroll reveals, reading progress, particles, and the delayed ending
+- Netlify static hosting configuration
 
-- `index.html` contains the complete letter in its original order. Treat the letter copy as immutable.
-- `styles.css` contains the full visual system and all responsive behavior.
-- `script.js` manages scroll reveals, reading progress, the delayed final message, the return control, and the ambient canvas.
-- `assets/you.jpeg` is the story's mosaic image and must remain immediately after the mosaic introduction.
-- `netlify.toml` publishes the repository root as the static site.
+## Run Locally
 
-## Conventions
+No package installation or build step is required. Open `index.html` directly in a browser, or serve the project directory with any static file server.
 
-- Use semantic HTML and preserve the continuous letter format without chapter titles or sections.
-- Do not rewrite, remove, reorder, or replace any letter text or imagery.
-- Keep styling in `styles.css` and behavior in `script.js`; do not introduce frameworks or build tooling.
-- Prefer CSS transforms and opacity for motion.
-- Respect `prefers-reduced-motion` for all new animation work.
-- Maintain keyboard focus states and meaningful accessible labels.
+For Netlify local emulation, run:
 
-## Design Decisions
+```bash
+netlify dev --port 8889
+```
 
-The opening gate controls the start of the reading experience and prevents an abrupt page load. Paragraph reveals use Intersection Observer, while the final apology is intentionally delayed by two seconds after the preceding line enters view. The star field uses a small fixed canvas to avoid adding image dependencies or heavy visual effects.
+## Project Structure
+
+- `index.html` — the complete letter and accessible page structure
+- `styles.css` — visual system, responsive rules, and animations
+- `script.js` — reading interactions and ambient particle canvas
+- `assets/you.jpeg` — the supplied photo mosaic
+- `netlify.toml` — static publishing and response headers
