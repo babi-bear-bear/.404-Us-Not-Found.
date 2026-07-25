@@ -335,20 +335,6 @@ h1 {
     position:relative;
 }
 
-.flower-left{
-    position:absolute;
-    left:40px;
-    top:20px;
-    width:90px;
-   opacity:.85; filter: drop-shadow(0 4px 8px rgba(0,0,0,.08));
-}
-
-.flower-right{
-    position:absolute;
-    right:40px;
-    bottom:10px;
-    width:80px;
-}
 
 
 /* ---------- Responsive ---------- */
