@@ -1,201 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#09090b" />
-    <meta
-      name="description"
-      content="A quiet, personal farewell letter presented as a cinematic reading experience."
-    />
-    <title>A letter</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@300;400;500&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <canvas class="night-sky" aria-hidden="true"></canvas>
-    <div class="ambient-light" aria-hidden="true"></div>
-    <div class="film-grain" aria-hidden="true"></div>
-    <div class="ending-veil" aria-hidden="true"></div>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>To You, Babi — A Letter</title>
+<meta name="description" content="A quiet letter, once meant to be a monthsary gift." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-    <div class="opening" aria-hidden="false">
-      <div class="opening__mark" aria-hidden="true"><span></span></div>
-      <button class="opening__button" type="button">Begin reading</button>
+<canvas id="petal-canvas" aria-hidden="true"></canvas>
+
+<div class="wash wash-1" aria-hidden="true"></div>
+<div class="wash wash-2" aria-hidden="true"></div>
+<div class="wash wash-3" aria-hidden="true"></div>
+
+<main id="letter">
+
+  <!-- Opening / cover page -->
+  <section class="page cover" data-reveal>
+    <div class="paper cover-paper">
+      <svg class="flower flower-tl" viewBox="0 0 120 120" aria-hidden="true"><use href="#flower-sprig"/></svg>
+      <svg class="flower flower-br" viewBox="0 0 120 120" aria-hidden="true"><use href="#flower-sprig"/></svg>
+      <p class="eyebrow">a letter, quietly kept</p>
+      <h1>To You, Babi</h1>
+      <p class="subtitle">Something I've been holding onto&hellip;<br>meant for our 3rd monthsary.</p>
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+        <p>read gently</p>
+      </div>
     </div>
-
-    <div class="reading-progress" aria-hidden="true"><span></span></div>
-
-    <main class="letter" id="letter">
-      <article class="letter__body" aria-label="Farewell letter">
-        <div class="letter__opening" aria-hidden="true">
-          <span class="letter__rule"></span>
-          <span class="letter__ornament">✦</span>
-          <span class="letter__rule"></span>
-        </div>
-
-        <p class="reveal lead">I know this is my chance to say everything, and hindi ko na sasayangin 'to because I know this is probably the only time I'll be able to say everything I want to say.<br />I just want you to understand where I'm coming from because I don't want you to misunderstand everything I'm about to tell you.</p>
-
-        <p class="reveal">I think you deserve an explanation. I don't want you to think this happened overnight, or because of one fight or one conversation.</p>
-
-        <p class="reveal pause emphasis">It didn't.</p>
-
-        <p class="reveal">I don't even know exactly when it started.<br />All I know is that the more I fell for you, the more I realized how much you meant to me. And somehow... that's when my mind started changing.</p>
-
-        <p class="reveal">Before maging tayo, I was someone who questioned things, but I didn't overthink them. When I started having feelings for you, I began questioning everything. Every decision. Every feeling. Every possibility. Every "what if." It was like my mind couldn't stop searching for answers to questions that didn't have answers.</p>
-
-        <p class="reveal pause emphasis">Para akong nasa isang gera laban sa sarili kong isip.</p>
-
-        <p class="reveal">At first, I didn't think much of it. I thought maybe it was because I cared about you so much. I thought I was just being careful because I didn't want to lose someone who meant so much to me.</p>
-
-        <p class="reveal">But instead of those thoughts fading away...</p>
-
-        <p class="reveal pause emphasis">They only became louder.</p>
-
-        <p class="reveal pause emphasis">I hated it.</p>
-
-        <p class="reveal">I hated how my own mind wouldn't let me simply enjoy being with you. Instead of just being happy that I had you, I kept questioning everything.</p>
-
-        <p class="reveal quote">I kept telling myself, "Just be happy. Stop asking so many questions. Trust what you feel for her."</p>
-
-        <p class="reveal">But no matter how hard I tried, those thoughts always came back.</p>
-
-        <p class="reveal">That's why I honestly believed loving you would be enough. I thought that once we became official, my mind would finally be at peace. I thought all the doubts I had before would disappear.</p>
-
-        <p class="reveal pause emphasis">But...<br />I was wrong.</p>
-
-        <p class="reveal">Instead of finding peace, I found myself questioning everything all over again.</p>
-
-        <p class="reveal">At first, I thought it was just temporary. Akala ko mawawala rin 'to. Lagi kong sinasabi sa sarili ko, "Maybe tomorrow magiging okay na ulit."</p>
-
-        <p class="reveal">That's why I didn't tell you everything. I honestly believed those thoughts would eventually disappear.</p>
-
-        <p class="reveal pause emphasis">But they never did.</p>
-
-        <p class="reveal">As time went on, parang araw araw may bagong tanong yung nasa utak ko.</p>
-
-        <p class="reveal question">"What if I never feel like I'm enough for you, no matter how many times you reassure me?"</p>
-
-        <p class="reveal question">"What if I end up holding you back from meeting someone who can love you the way you deserve?"</p>
-
-        <p class="reveal question">"What if I keep making promises I'm not sure I can keep?"</p>
-
-        <p class="reveal question">"What if I continue, and you give me your whole heart while I'm still full of doubts?"</p>
-
-        <p class="reveal question">"What if I leave and regret that too?"</p>
-
-        <p class="reveal">Every time I found an answer, another question would appear. Lagi na lang may bagong tanong sa isip ko, and I didn't know how to stop it.</p>
-
-        <p class="reveal">Instead of enjoying our relationship, I spent so much time fighting my own thoughts.</p>
-
-        <p class="reveal">Every reassurance you gave me really meant a lot. It always made me feel okay...</p>
-
-        <p class="reveal pause emphasis">But only for a while.</p>
-
-        <p class="reveal">Eventually, the overthinking always came back, and it became mentally and emotionally exhausting.</p>
-
-        <p class="reveal">I know you probably felt that too.</p>
-
-        <p class="reveal">I'm sorry if I made you feel like you always had to reassure me.</p>
-
-        <p class="reveal">I know you kept trying to make me feel better, and I'm really grateful for that.</p>
-
-        <p class="reveal">The problem was never that you didn't do enough. No matter how much you reassured me, I'd only feel okay for a while before the overthinking came back.</p>
-
-        <p class="reveal">I wanted to believe I was ready for this relationship, but I slowly realized I wasn't. Akala ko kaya ko pero hindi pala</p>
-
-        <p class="reveal">Even before, there was always a part of me that felt like I did better on my own. I kept pushing that feeling aside because I loved you and I genuinely wanted us to last.</p>
-
-        <p class="reveal">But no matter how much I wanted that, the uncertainty never really disappeared.</p>
-
-        <p class="reveal">There's also one moment I want to tell you about because it made me question myself even more.</p>
-
-        <p class="reveal pause emphasis">Back on July 9, I wrote this.</p>
-
-        <p class="reveal">I don't think July 9 was the beginning. I'd been questioning myself long before that. I just kept convincing myself those thoughts would eventually disappear because I loved you and I wanted us to work.</p>
-
-        <p class="reveal">Then you told me what Ivy said. You said she wanted you to get back with your ex or date a guy instead because she thought that would be better for you.</p>
-
-        <p class="reveal">When I heard that, it felt like every doubt I'd been trying to bury suddenly came back all at once.<br />I kept asking myself,</p>
-
-        <p class="reveal question">"What if she's right? What if one day you realize she's right too? What if I'm only holding you back from the life you deserve?"</p>
-
-        <p class="reveal">I never told you any of that. Instead, I reassured you because I wanted to believe those thoughts would pass. I convinced myself they were just another episode of overthinking.</p>
-
-        <p class="reveal">But every time I thought I'd finally moved on from them...</p>
-
-        <p class="reveal pause emphasis">They came back.</p>
-
-        <p class="reveal">That's why July 9 stayed with me.</p>
-
-        <p class="reveal pause emphasis">Not because of what Ivy said.</p>
-
-        <p class="reveal">But because that was the first time I realized how hard I was fighting my own mind, even while trying my best to hold on to us.</p>
-
-        <p class="reveal">The more I overthought, the more I convinced myself that maybe letting you go was better than asking you to stay with someone who couldn't stop questioning himself.</p>
-
-        <p class="reveal">That's when I started thinking about breaking up.<br />What hurt me the most was that I couldn't understand why I felt this way.</p>
-
-        <p class="reveal pause emphasis">Because I loved you.</p>
-
-        <p class="reveal">So I kept asking myself...</p>
-
-        <p class="reveal question">"If I love her this much... why can't I find peace?"</p>
-
-        <p class="reveal pause emphasis">Honestly...</p>
-
-        <p class="reveal">I still don't fully know the answer.</p>
-
-        <p class="reveal">I'm also sorry that I pursued you even though there were doubts inside me that I didn't even understand myself.</p>
-
-        <p class="reveal">Please don't ever think that I didn't love you.<br />Because I did.</p>
-
-        <p class="reveal memory">Every "I love you" was real.</p>
-
-        <p class="reveal memory">Every effort I made was real.</p>
-
-        <p class="reveal memory">Every memory we created was real.</p>
-
-        <p class="reveal">Every website I made, every surprise, every late-night conversation, every smile you gave me...<br />I cherished all of it.</p>
-
-        <p class="reveal pause emphasis">You genuinely made me happy.</p>
-
-        <p class="reveal mosaic-intro">Before I continue...<br />I want to show you something.</p>
-
-        <figure class="mosaic reveal" aria-label="A mosaic made from screenshots">
-          <div class="mosaic__frame">
-            <img src="assets/you.jpeg" alt="A photo mosaic made from hundreds of tiny screenshots collected during calls" />
-          </div>
-        </figure>
-
-        <p class="reveal">The picture above was supposed to stay a secret for a little while longer.<br />I guess this is the only time I can finally show it to you.<br />It was meant to be part of your 3rd monthsary surprise.<br />Actually... not just the picture. This whole website was. The theme, the design, and everything you're seeing right now were originally made for our 3rd monthsary.<br />I still remember that while I was busy making our 2nd monthsary website, I was already secretly working on this one too. I was just so excited to make another surprise for you. Hehe. I never thought that the website I was making for our next monthsary would end up becoming this instead.<br />I had already started making it before all of this happened. It's a picture of you made from hundreds of tiny screenshots I secretly collected during our calls.<br />I still remember that time when you kept insisting that I send you all of them. I only sent a few because I thought you wouldn't like the rest. But after that, I just told myself, "Eh, pake mo ba." Hehe. I was going to keep taking screenshots anyway.<br />The screenshot in the middle of the mosaic is actually my favorite one. I took it on February 19, 2026, at exactly 11:23. I don't really know why, but every time I looked at it, it made me smile.<br />I still remember that day. You kept pouting while hugging your teddy bear. Haha. You looked so cute that all I wanted to do was kiss you. I remember staring at that screenshot and thinking, "Ang cute mo naman." I even wanted to just impulsively confess my feelings right then and there... but syempre, I didn't. Hehe.<br />I really thought this would be one of the surprises I'd finally get to show you.<br />I just never imagined you'd end up seeing it like this instead.<br />I just wanted you to know that this existed.<br />Now... let me continue.</p>
-
-        <p class="reveal">I guess that's why this hurts so much.<br />If I had already stopped loving you, none of this would've existed.<br />This website wouldn't have existed.<br />That mosaic wouldn't have existed.<br />Those hundreds of screenshots wouldn't have existed.<br />I was still looking forward to making more memories with you.<br />That's why making this decision has been one of the hardest things I've ever had to do.<br />I'm also sorry for making you wait for a whole week.<br />Honestly... I didn't want to send this yet.<br />A part of me kept hoping I'd wake up one morning and everything inside my mind would finally become clear.<br />I wanted to hold on a little longer because I really didn't want this to be the ending for us.<br />But I also didn't want to keep making you wait while I was still fighting myself.<br />You deserved an answer, even if it was one neither of us wanted.<br />It would've been so much easier if I had simply stopped loving you.<br />But that's not what happened.<br />Right now, I can't choose this relationship while I'm still so uncertain about myself.<br />It wouldn't be fair to you.<br />You deserve someone who can choose you wholeheartedly without constantly questioning themselves.<br />Right now...<br />I can't honestly say I'm that person.<br />It hurts me knowing that this decision is going to hurt you.<br />I think that's one of the hardest parts of all of this.<br />I don't know when you'll be okay, but I truly hope that, little by little, you'll heal and smile again.<br />Even if I'm no longer there to see it.<br />Before I end this...<br />There's just one last thing I want to leave you with.<br />Please sleep early, okay?<br />Honestly, I've been feeling guilty about this too.<br />Sa gabi lang talaga tayo nakakapag-usap, and most of the time it's already around 11 PM or even later.<br />Thank you for staying awake just to spend time with me ah<br />I appreciated every single night.<br />But after this...<br />I hope you'll take better care of yourself.<br />Please get enough sleep.<br />Don't sacrifice your health for someone again.<br />I know I won't be the one reminding you anymore...<br />So I hope you'll remember to take care of yourself for me, even just this one last time.<br />And...<br />I know I hurt you, and if you become angry with me, I'll understand.<br />I just hope that one day, when this doesn't hurt as much anymore, you'll remember me as someone who truly loved you, even if I couldn't overcome the battles inside my own mind.</p>
-
-        <div class="ending">
-          <p class="reveal ending__line">I guess</p>
-          <p class="reveal ending__line">This is really the end..</p>
-          <p class="reveal ending__line">Thank you for loving me, babi.</p>
-          <p class="reveal ending__line">I cherished every bit of it with all my heart.</p>
-          <p class="reveal ending__line">Thank you for being so patient with me, even when I was so stubborn.</p>
-          <p class="reveal ending__line">Thank you for every reassurance, every effort, every memory, and every moment you shared with me.</p>
-          <p class="reveal ending__line">None of it was ever taken for granted.</p>
-          <p class="reveal ending__line">I'll always be grateful that, even if it was only for a little while, I got to experience a love like yours.</p>
-          <p class="reveal ending__stay" id="final-pause">If love alone had been enough...<br />I would've stayed.</p>
-          <p class="ending__sorry" id="final-words">I'm sorry, babi.</p>
-        </div>
-      </article>
-    </main>
-
-    <button class="back-to-top" type="button" aria-label="Return to the beginning">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 19V5M6.5 10.5 12 5l5.5 5.5" />
-      </svg>
-    </button>
-  </body>
+  </section>
+
+  <!-- Letter body — paragraphs injected as paper cards by script.js -->
+  <section class="page letter-page" id="letter-body" data-reveal></section>
+
+  <!-- Mosaic photo -->
+  <section class="page photo-page" data-reveal>
+    <p class="photo-intro">Before I continue&hellip; I want to show you something.</p>
+    <div class="photo-frame">
+      <svg class="flower flower-side-left" viewBox="0 0 120 200" aria-hidden="true"><use href="#flower-tall"/></svg>
+      <div class="photo-mat">
+        <img src="assets/mosaic-placeholder.svg" alt="A mosaic made of hundreds of gathered screenshots, forming her portrait" id="mosaic-photo" data-placeholder="true" />
+        <div class="photo-caption">February 19, 2026 &middot; 11:23</div>
+      </div>
+      <svg class="flower flower-side-right" viewBox="0 0 120 200" aria-hidden="true"><use href="#flower-tall"/></svg>
+    </div>
+    <p class="photo-note">Hundreds of tiny screenshots, quietly gathered, becoming you.</p>
+  </section>
+
+  <!-- Continuation of letter after photo -->
+  <section class="page letter-page" id="letter-body-2" data-reveal></section>
+
+  <!-- Closing -->
+  <section class="page closing" data-reveal>
+    <div class="paper closing-paper">
+      <svg class="flower flower-tl small" viewBox="0 0 120 120" aria-hidden="true"><use href="#flower-sprig"/></svg>
+      <p class="closing-line">Thank you for loving me, babi.</p>
+      <p class="closing-line small">If love alone had been enough&hellip; I would've stayed.</p>
+      <p class="signature">I'm sorry, babi.</p>
+      <svg class="flower flower-br small" viewBox="0 0 120 120" aria-hidden="true"><use href="#flower-sprig"/></svg>
+    </div>
+  </section>
+
+</main>
+
+<!-- Reusable inline SVG flower sprites (watercolor-style, hand-drawn feel) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="flower-sprig">
+      <ellipse cx="30" cy="70" rx="10" ry="18" fill="#EAD9DD" opacity="0.85" transform="rotate(-20 30 70)"/>
+      <ellipse cx="45" cy="55" rx="11" ry="20" fill="#F3D8D8" opacity="0.85" transform="rotate(10 45 55)"/>
+      <ellipse cx="60" cy="70" rx="10" ry="18" fill="#D8A7A7" opacity="0.8" transform="rotate(30 60 70)"/>
+      <circle cx="46" cy="56" r="6" fill="#C9B27C" opacity="0.9"/>
+      <path d="M46 76 C40 90, 42 100, 38 112" stroke="#AEBFA5" stroke-width="3" fill="none" opacity="0.8"/>
+      <ellipse cx="40" cy="95" rx="10" ry="4" fill="#AEBFA5" opacity="0.7" transform="rotate(-30 40 95)"/>
+      <ellipse cx="36" cy="108" rx="9" ry="4" fill="#AEBFA5" opacity="0.7" transform="rotate(20 36 108)"/>
+    </g>
+    <g id="flower-tall">
+      <path d="M60 190 C55 150, 65 120, 58 80" stroke="#AEBFA5" stroke-width="3" fill="none" opacity="0.75"/>
+      <ellipse cx="58" cy="130" rx="12" ry="5" fill="#AEBFA5" opacity="0.65" transform="rotate(-25 58 130)"/>
+      <ellipse cx="60" cy="160" rx="12" ry="5" fill="#AEBFA5" opacity="0.65" transform="rotate(20 60 160)"/>
+      <ellipse cx="48" cy="70" rx="9" ry="16" fill="#EAD9DD" opacity="0.85" transform="rotate(-15 48 70)"/>
+      <ellipse cx="62" cy="58" rx="10" ry="18" fill="#F3D8D8" opacity="0.85"/>
+      <ellipse cx="72" cy="72" rx="9" ry="16" fill="#D8A7A7" opacity="0.8" transform="rotate(20 72 72)"/>
+      <circle cx="60" cy="62" r="6" fill="#C9B27C" opacity="0.9"/>
+      <ellipse cx="30" cy="45" rx="7" ry="13" fill="#D8D2E8" opacity="0.7" transform="rotate(-10 30 45)"/>
+      <circle cx="30" cy="45" r="4" fill="#C9B27C" opacity="0.8"/>
+    </g>
+  </defs>
+</svg>
+
+<script src="script.js"></script>
+</body>
 </html>
