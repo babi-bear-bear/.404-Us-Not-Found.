@@ -330,6 +330,27 @@ h1 {
 .flower-tl { top: -28px; left: -28px; transform: rotate(-8deg); }
 .flower-br { bottom: -28px; right: -28px; transform: rotate(172deg); }
 
+
+.letter-section{
+    position:relative;
+}
+
+.flower-left{
+    position:absolute;
+    left:40px;
+    top:20px;
+    width:90px;
+   opacity:.85; filter: drop-shadow(0 4px 8px rgba(0,0,0,.08));
+}
+
+.flower-right{
+    position:absolute;
+    right:40px;
+    bottom:10px;
+    width:80px;
+}
+
+
 /* ---------- Responsive ---------- */
 
 @media (min-width: 780px) {
