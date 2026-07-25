@@ -260,6 +260,16 @@
       el.classList.add("reveal");
       observer.observe(el);
     });
+
+    // Safety net: some in-app browsers (Messenger, Instagram, etc.) fire
+    // IntersectionObserver unreliably or not at all, which would otherwise
+    // leave text permanently hidden at opacity 0. Force everything visible
+    // shortly after load if the observer hasn't already handled it.
+    setTimeout(function () {
+      sections.forEach(function (el) { el.classList.add("is-visible"); });
+      cards.forEach(function (el) { el.classList.add("is-visible"); });
+      observer.disconnect();
+    }, 2500);
   } else {
     sections.forEach(function (el) { el.classList.add("is-visible"); });
     cards.forEach(function (el) { el.classList.add("is-visible"); });
