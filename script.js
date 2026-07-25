@@ -260,7 +260,7 @@
       el.classList.add("reveal");
       observer.observe(el);
     });
-
+    
     // Safety net: some in-app browsers (Messenger, Instagram, etc.) fire
     // IntersectionObserver unreliably or not at all, which would otherwise
     // leave text permanently hidden at opacity 0. Force everything visible
