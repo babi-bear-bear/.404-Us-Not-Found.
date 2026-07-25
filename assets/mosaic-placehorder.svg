@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <radialGradient id="g1" cx="30%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#F3D8D8"/>
+      <stop offset="100%" stop-color="#F6F0E7"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="80%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#D8D2E8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F6F0E7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g1)"/>
+  <rect width="800" height="1000" fill="url(#g2)"/>
+  <g opacity="0.35" fill="#AEBFA5">
+    <ellipse cx="120" cy="880" rx="60" ry="26" transform="rotate(-20 120 880)"/>
+    <ellipse cx="680" cy="120" rx="60" ry="26" transform="rotate(30 680 120)"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#7A6458">
+    her mosaic photo
+  </text>
+  <text x="400" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#7A6458" opacity="0.8">
+    replace assets/mosaic.jpg with the real image
+  </text>
+</svg>
