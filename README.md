@@ -1,28 +1,34 @@
-Cinematic Farewell Letter
+# To You, Babi — A Letter
 
-A quiet, responsive farewell website designed as one continuous editorial reading experience. The original letter remains intact and the supplied photo mosaic stays in its intended position within the story.
+A single-page, static website presenting a long personal letter as a peaceful, watercolor-inspired scrapbook. It was designed to feel like a 3rd monthsary gift first — warm, romantic, handmade — so the emotional weight comes from the words themselves rather than from dark or dramatic visuals.
 
-## Technologies
+## What it is
 
-- HTML5 for the semantic letter structure
-- CSS3 for the dark editorial design, responsive layout, and transitions
-- Vanilla JavaScript for scroll reveals, reading progress, particles, and the delayed ending
-- Netlify static hosting configuration
+- A cover page, the letter split into readable paper "cards," a centered mosaic-photo page, and a closing page.
+- One serif font (Cormorant Garamond) for headings/emphasis and one serif-leaning body font (Lora) for paragraphs — intentionally no extra typefaces.
+- Soft watercolor background washes, floating petal particles, and small hand-drawn SVG flower sprigs framing the paper and the photo.
+- Gentle scroll-reveal animations (fade + slight upward slide) via `IntersectionObserver`, with a `prefers-reduced-motion` fallback that disables motion entirely.
+- Fully responsive, with mobile treated as the primary reading surface (comfortable padding, larger line-height, non-cramped paragraph spacing).
 
-## Run Locally
+## Tech
 
-No package installation or build step is required. Open `index.html` directly in a browser, or serve the project directory with any static file server.
+Plain HTML, CSS, and vanilla JavaScript only — no frameworks, no build step.
 
-For Netlify local emulation, run:
+- `index.html` — page structure and the two letter-body mount points
+- `styles.css` — the entire visual design (colors, paper cards, flowers, responsive rules)
+- `script.js` — renders the letter paragraphs into paper cards, drives scroll reveals, and animates the floating petals on a `<canvas>`
+- `assets/mosaic-placeholder.svg` — a placeholder for the real mosaic photo
+
+## Running locally
+
+No install or build required — just serve the folder statically, e.g.:
 
 ```bash
-netlify dev --port 8889
+npx serve .
 ```
 
-## Project Structure
+or open `index.html` directly in a browser.
 
-- `index.html` — the complete letter and accessible page structure
-- `styles.css` — visual system, responsive rules, and animations
-- `script.js` — reading interactions and ambient particle canvas
-- `assets/you.jpeg` — the supplied photo mosaic
-- `netlify.toml` — static publishing and response headers
+## Adding the real photo
+
+Replace `assets/mosaic-placeholder.svg` with the actual photo (e.g. `assets/mosaic.jpg`) and update the `src` on `#mosaic-photo` in `index.html`.
