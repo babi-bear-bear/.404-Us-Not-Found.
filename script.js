@@ -157,7 +157,7 @@
     ],
     [
       "That's why making this decision has been one of the hardest things I've ever had to do.",
-      "I'm also sorry for making you wait for a whole week.",
+      "I'm also sorry for making you wait for almost a week.",
       "Honestly... I didn't want to send this yet."
     ],
     [
